@@ -1,0 +1,33 @@
+<h1>Liste des utilisateurs</h1>
+
+<div id="profil" class="row">
+
+  <p>SPRING MESSAGE message</p>
+
+
+  <div class="col s12 m7" *ngFor="let user of lstUsers">
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content">
+          <h2 id="{{user.id}}" class="header headers">{{user.firstname | titlecase}} {{user.lastname | uppercase}}</h2>
+
+          <form #userForm="ngForm" (ngSubmit)="onSubmitUpdate(userForm)" >
+            <div class="card-action">
+              <input type="hidden" [name]="'userId_' + user.id" value="user.id" required [(ngModel)]="user.id" />
+
+              <label class="form-label" [for]="'roles_' + user.id" >Roles</label>
+              <select class="form-select" [name]="'roles_' + user.id" required [(ngModel)]="user.roles" >
+                <option *ngFor="let role of lstRoles" [selected]="user.roles.includes(role)" [value]="role">{{role}}</option>
+              </select>
+            </div>
+
+            <a (click)="onRemove(user.id)" class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a>
+            <button type="submit" class="waves-effect waves-light btn-small"><i class="material-icons">update</i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>  

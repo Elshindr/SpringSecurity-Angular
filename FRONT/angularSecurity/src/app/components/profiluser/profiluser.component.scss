@@ -1,0 +1,29 @@
+#profil{
+  margin:auto;
+}
+
+.row{
+  display : flex;
+  margin: 5rem 10rem;
+}
+
+.input-field.col.s2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  width: fit-content;
+}
+em {
+  text-decoration: none;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.badges{
+  display: flex;
+  flex-direction: row;
+}

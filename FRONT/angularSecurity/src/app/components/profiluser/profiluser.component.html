@@ -1,0 +1,35 @@
+<h1>Mes Informations</h1>
+
+<div id="profil" class="row">
+
+  <p>SPRING MESSAGE {{message}}</p>
+  <div class="col s7">
+
+    <div class="row">
+
+      <div class="input-field col s2">
+        <ul class="collection">
+          <li class="collection-item">Nom:  <em>{{userCur.lastname| titlecase}}</em></li>
+          <li class="collection-item">Prenom:  <em>{{userCur.firstname| titlecase}}</em></li>
+          <li class="collection-item">Email:  <em>{{userCur.email| titlecase}}</em></li>
+          <li class="collection-item">Mdp:  <em>{{userCur.password| titlecase}}</em></li>
+          <li class="collection-item" style ="display: flex;">Profils:&nbsp;&nbsp;
+            <div class ="badges">
+              <div  *ngFor="let role of userCur.roles">
+                <div class="chip">{{role | titlecase}}</div>
+              </div>
+            </div>
+            
+          </li>
+      </ul>
+
+      <p></p>
+      
+      </div>
+
+
+    </div>
+
+    
+  </div>
+</div>

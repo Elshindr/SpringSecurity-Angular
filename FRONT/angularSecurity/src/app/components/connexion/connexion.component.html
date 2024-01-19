@@ -1,0 +1,26 @@
+<h1>Connexion</h1>
+
+<div id="connexion" class="row">
+
+  <p>{{message}}</p>
+  <form #coForm="ngForm" (ngSubmit)="onSubmitConnect(coForm)"  class="col s7">
+
+    <div class="row">
+        <div class="input-field col s5">
+          <input id="email" name="email" type="text" class="validate"  required ngModel>
+          <label for="email">Email</label>
+       <!--  <span class="helper-text" data-error="wrong" data-success="right">Format attendu : monadresse@gmail.com</span>--> 
+        </div>
+
+        <div class="input-field col s5">
+          <input id="password" name="password" type="password" class="validate" required ngModel>
+          <label for="password">Password</label>
+        </div>
+    </div>
+
+    <button class="btn waves-effect waves-light" type="submit" name="action">Se Connecter
+      <i class="material-icons right">send</i>
+    </button>
+
+  </form>
+</div>

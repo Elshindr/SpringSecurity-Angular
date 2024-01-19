@@ -1,0 +1,17 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li *ngIf="userCur.email ==''"><a routerLink="connexion/inscription">Inscription</a></li>
+        <li *ngIf="userCur.email ==''"><a (click)="reloadConnexion()" routerLink="connexion/connexion">Connexion</a></li>
+        <li *ngIf="userCur.email !=''"><a routerLink="profil">Profil</a></li>
+        <li *ngIf="userCur.roles.includes('ROLE_MODER') || userCur.roles.includes('ROLE_ADMIN')"><a routerLink="profil/all">Liste des Utilisateurs (ADMIN)</a></li>
+        <li *ngIf="userCur.email !=''" >
+          <a (click)="logOut()" routerLink="connexion/connexion">Déconnexion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+
+#inscription{
+  margin:auto;
+}
+
+.row{
+  display : flex;
+  width: fit-content;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:5em;
+}
+
+.btn:hover, .btn:focus{
+  background-color: purple;
+  color: #fff;
+}
